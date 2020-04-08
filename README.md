@@ -1,0 +1,7 @@
+# Integral Calculator
+
+This program calculates definite integrals using Simpson's Rule. Simpson's Rule uses parabolic arcs to approximate the integral. More information on how Simpson's Rule works can be found [here](https://en.wikipedia.org/wiki/Simpson%27s_rule "Simpson's Rule"). This programs uses tkinter to create a GUI. The GUI will ask for the user to give a function, the bounds for integration, and the number of subintervals. Then the user can click the calculate button to see the result.
+
+The `runner.py` is the main file that creates the tkinter window and checks that the user's inputs were valid. `runner.py` calls on the other files to calculate the integral. First, it calls on `converter.py` to take the user's input function to integrate (which is in infix form) and convert it into postfix form. Then a binary expression tree is created from the ExpressionTree class in `expressiontree.py`.
+
+For information on what an expression tree is and how they work click [here](https://en.wikipedia.org/wiki/Binary_expression_tree "Expression Tree"). Using the expression tree, the user's function can be solved for a specific input value. Finally, `integrate.py` uses Simpson's Rule and calculates the definite integral. `runner.py` will display the answer on the GUI. 
